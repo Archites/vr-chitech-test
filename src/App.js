@@ -1,10 +1,11 @@
 import React from 'react'
-import './App.css'
+import { Switch, Route } from 'react-router'
+import ExamplePage from './pages/ExamplePage'
 
 const App = () => (
-	<div className="App">
-		<header className="App-header">HELP</header>
-	</div>
+	<Switch>
+		<Route exact path="/" component={ExamplePage} />
+	</Switch>
 )
 
 export default App
