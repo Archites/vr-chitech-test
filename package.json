@@ -60,8 +60,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint": "eslint src",
-    "precommit": "lint-staged"
+    "lint": "eslint src"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -117,6 +116,11 @@
     "presets": [
       "react-app"
     ]
+  },
+  "husky": {
+    "hooks": {  
+    "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js,jsx}": [
