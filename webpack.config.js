@@ -2,13 +2,13 @@
 const webpack = require('webpack')
 const path = require('path')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/',
   },
   module: {
     rules: [
@@ -38,9 +38,12 @@ const config = {
   },
   plugins: [
     new LodashModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: path.resolve(__dirname, 'src/common/Template/template.html'),
+    }),
   ],
   devServer: {
-    contentBase: './public',
     historyApiFallback: true,
   },
 }

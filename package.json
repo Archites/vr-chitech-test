@@ -7,10 +7,11 @@
   "author": "",
   "license": "ISC",
   "scripts": {
+    "dev": "npm-run-all build-dev start",
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack -d --mode development",
     "build-prod": "webpack -p --mode production",
-    "dev": "webpack-dev-server --hot --mode development",
+    "start": "webpack-dev-server --hot --mode development",
     "lint": "eslint src"
   },
   "repository": {
@@ -18,6 +19,7 @@
     "url": "https://github.com/Archites/vr-chitech.git"
   },
   "dependencies": {
+    "html-webpack-plugin": "^3.2.0",
     "lodash": "^4.17.11",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -38,6 +40,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "lodash-webpack-plugin": "^0.11.5",
+    "npm-run-all": "^4.1.5",
     "url-loader": "^1.1.2",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
