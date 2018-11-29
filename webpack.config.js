@@ -1,19 +1,21 @@
-const webpack = require('webpack');
-const path = require('path');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+// eslint-disable-next-line
+const webpack = require('webpack')
+const path = require('path')
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 
 const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.png$/,
@@ -21,25 +23,26 @@ const config = {
           {
             loader: 'url-loader',
             options: {
-              mimetype: 'image/png'
-            }
-          }
-        ]
-      }
-    ]
+              mimetype: 'image/png',
+            },
+          },
+        ],
+      },
+    ],
   },
   resolve: {
     extensions: [
       '.js',
-      '.jsx'
-    ]
+      '.jsx',
+    ],
   },
   plugins: [
-    new LodashModuleReplacementPlugin
+    new LodashModuleReplacementPlugin(),
   ],
   devServer: {
-    contentBase: './dist'
-  }
+    contentBase: './public',
+    historyApiFallback: true,
+  },
 }
 
-module.exports = config;
+module.exports = config

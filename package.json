@@ -10,14 +10,19 @@
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack -d --mode development",
     "build-prod": "webpack -p --mode production",
-    "start": "webpack-dev-server --hot --mode development",
+    "dev": "webpack-dev-server --hot --mode development",
     "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Archites/vr-chitech.git"
   },
   "dependencies": {
     "lodash": "^4.17.11",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-hot-loader": "^4.3.11",
+    "react-router-dom": "^4.3.1",
     "styled-components": "^4.1.2"
   },
   "devDependencies": {
