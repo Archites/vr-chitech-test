@@ -14,6 +14,18 @@
     "start": "webpack-dev-server --hot --mode development",
     "lint": "eslint src"
   },
+  "husky": {
+    "hooks": {  
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Archites/vr-chitech.git"
@@ -39,6 +51,8 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
     "lodash-webpack-plugin": "^0.11.5",
     "npm-run-all": "^4.1.5",
     "url-loader": "^1.1.2",
