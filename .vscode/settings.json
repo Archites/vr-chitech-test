@@ -9,5 +9,4 @@
 		"**/bower_components": true
 	},
 	"javascript.validate.enable": false,
-	"flow.useNPMPackagedFlow": true
 }
