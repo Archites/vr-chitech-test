@@ -1,4 +1,4 @@
-# vr-chitect
+# VR Chitech Test
 
 ## Building and running on localhost
 
