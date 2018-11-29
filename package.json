@@ -1,0 +1,41 @@
+{
+  "name": "vr-chitech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack -d --mode development",
+    "build-prod": "webpack -p --mode production",
+    "start": "webpack-dev-server --hot --mode development",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-hot-loader": "^4.3.11",
+    "styled-components": "^4.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "acorn": "^6.0.4",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "lodash-webpack-plugin": "^0.11.5",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
